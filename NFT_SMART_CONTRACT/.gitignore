@@ -1,0 +1,22 @@
+node_modules
+.env
+coverage
+coverage.json
+typechain
+typechain-types
+
+#Hardhat files
+cache
+artifacts
+
+Notes:
+QUESTION:
+
+Need help clarifying the difference between minting and creating a contract (ERC-721)
+
+ANSWER:
+
+You create a smart contract (erc721). This means you deploy it on blockchain. This is now a piece of code (confirming to erc721 standard that describes what a code that represents non fungible tokes looks like) on the blockchain that gets an address.
+When you mint a nft token. This means you create a new unique token with a unique ID on that existing smart contract.
+So you create(deploy) once. And then mint as many nfts that you want on that smart contract.
+So in practice. You have cryptokitties smart contract. And on that smart contract you have many crypto kitties...

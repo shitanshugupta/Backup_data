@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title>Vending Machine</title>
+</head>
+
+<body>
+    <div>
+        <button id="getBalance">getBalance</button>
+        <p id="balance"></p>
+    </div>
+    <div>
+        <input type="text" id="stockValue">
+        <button id="addStock">addStock</button>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" crossorigin="anonymous"></script>
+    <script>
+        var contract;
+        $(document).ready(function () {
+            $('#getBalance').click(function () {
+                var web3 = new Web3('https://eth-goerli.g.alchemy.com/v2/qfPH5J0s-pJJSDIvzTu5bB7HYAL7luye');
+                var abi = [
+                    {
+                        "inputs": [],
+                        "stateMutability": "nonpayable",
+                        "type": "constructor"
+                    },
+                    {
+                        "inputs": [
+                            {
+                                "internalType": "address",
+                                "name": "",
+                                "type": "address"
+                            }
+                        ],
+                        "name": "donutBalances",
+                        "outputs": [
+                            {
+                                "internalType": "uint256",
+                                "name": "",
+                                "type": "uint256"
+                            }
+                        ],
+                        "stateMutability": "view",
+                        "type": "function",
+                        "constant": true
+                    },
+                    {
+                        "inputs": [],
+                        "name": "owner",
+                        "outputs": [
+                            {
+                                "internalType": "address",
+                                "name": "",
+                                "type": "address"
+                            }
+                        ],
+                        "stateMutability": "view",
+                        "type": "function",
+                        "constant": true
+                    },
+                    {
+                        "inputs": [],
+                        "name": "getVendingMachineBalacnce",
+                        "outputs": [
+                            {
+                                "internalType": "uint256",
+                                "name": "",
+                                "type": "uint256"
+                            }
+                        ],
+                        "stateMutability": "view",
+                        "type": "function",
+                        "constant": true
+                    },
+                    {
+                        "inputs": [
+                            {
+                                "internalType": "uint256",
+                                "name": "amount",
+                                "type": "uint256"
+                            }
+                        ],
+                        "name": "addStock",
+                        "outputs": [],
+                        "stateMutability": "nonpayable",
+                        "type": "function"
+                    },
+                    {
+                        "inputs": [
+                            {
+                                "internalType": "uint256",
+                                "name": "amount",
+                                "type": "uint256"
+                            }
+                        ],
+                        "name": "purchaseDonut",
+                        "outputs": [],
+                        "stateMutability": "payable",
+                        "type": "function",
+                        "payable": true
+                    }
+                ]
+                var address = "0x4f4C4099F79151bD26F34DD5cE0E947296a418D3"
+                contract = new web3.eth.Contract(abi, address);
+                contract.methods.getVendingMachineBalacnce().call().then(function (bal) {
+                    $('#balance').html(bal);
+                })
+            })
+        })
+        $('#addStock').click(function () {
+            var amt = 0;
+            amt = parseInt($('#stockValue').val());
+            console.log(amt);
+            // async function connect() {
+                // const accounts = await ethereum.request({ method: 'eth_accounts' })
+                // console.log(accounts);
+                // var acc = accounts[0];
+                // console.log(acc);
+                // const x= await contract.methods.addStock(amt).send({ from: acc })
+                //     console.log(x);
+                ethereum.request({ method: 'eth_accounts' }) 
+                .then(console.log)
+            })
+            // connect()
+        // })
+    </script>
+</body>
+
+</html>

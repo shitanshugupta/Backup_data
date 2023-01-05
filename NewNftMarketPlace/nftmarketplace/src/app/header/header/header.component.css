@@ -1,0 +1,87 @@
+.toolbar {
+    /* position: absolute;
+    top: 0;
+    left: 0;
+    right: 0; */
+    height: 60px;
+    display: flex;
+    align-items: center;
+    background-color:darkslategrey;
+    color: white;
+    font-weight: 600;
+  }
+
+  .card svg.material-icons path {
+    fill: #888;
+  }
+
+  .card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 16px;
+    margin-left: 51.3%;
+    width: 100%
+  }
+
+  .card {
+    all: unset;
+    border-radius: 13px;
+    
+    height: 20px;
+    width: 20%;
+    margin: 0 8px 16px;
+    padding: 16px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items:flex-end;
+    transition: all 0.1s ease-in-out;
+    line-height: 24px;
+  }
+
+  .card-container .card:not(:last-child) {
+    margin-right: 0;
+  }
+
+  .card.card-small {
+    height: 16px;
+    width: 168px;
+  }
+
+  .card-container .card:not(.highlight-card) {
+    cursor: pointer;
+  }
+
+  .card-container .card:not(.highlight-card):hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35);
+  }
+
+  .card-container .card:not(.highlight-card):hover .material-icons path {
+    fill: rgb(105, 103, 103);
+  }
+
+  .card.highlight-card {
+    background-color: #1976d2;
+    color: white;
+    font-weight: 600;
+    border: none;
+    width: auto;
+    min-width: 30%;
+    position: relative;
+  }
+
+  .card.card.highlight-card span {
+    margin-left: 60px;
+  }
+
+  a,
+  a:visited,
+  a:hover {
+    text-decoration:whitesmoke;
+  }
+
+  a:hover {
+    text-decoration:double;
+  }

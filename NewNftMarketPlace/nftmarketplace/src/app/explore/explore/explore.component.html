@@ -1,0 +1,16 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-3" *ngFor="let datum of data" style="padding: 20px;">
+            <!-- <img src={{datum.imagepath}} alt="" width="100px" height="100px"> -->
+            <p>{{datum.name}}</p>
+            <div class="price row">
+                <p class="col-6">
+                    <span>{{datum.price}}eth</span>
+                </p>
+                <p class="col-6">
+                    <span>{{datum.address}}</span>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,40 @@
+module.exports=(sequelize,DataTypes)=>{
+    const Merchant=sequelize.define("Merchant",{
+        name:{
+            type:DataTypes.STRING,
+            allowNull:false
+        },
+        email:{
+            type:DataTypes.STRING,
+            allowNull:false
+        },
+        address:{
+            type:DataTypes.TEXT
+        },
+        company_name:{
+            type:DataTypes.STRING,
+            allowNull:false
+        },
+        gst_no:{
+            type:DataTypes.STRING,
+            allowNull:false,
+            unique:true
+        },
+        phone_no:{
+            type:DataTypes.STRING,
+            allowNull:false
+        },
+        password:{
+            type:DataTypes.STRING
+        },
+        status:{
+            type:DataTypes.STRING,
+            defaultValue:"Not-Verified"
+        }
+    },
+    {
+        timestamps:false
+    })
+
+    return Merchant
+}

@@ -1,0 +1,42 @@
+<div class="toolbar" role="banner">
+    <img
+      width="40"
+      alt=""
+      src="https://download.logo.wine/logo/Ethereum/Ethereum-Logo.wine.png"
+    />
+    <span>NFT Marketplace</span>
+    <div class="card-container">
+        <a class="card" target="_blank" rel="noopener" (click)="onExplore()" >
+          <svg class="material-icons"  width="24" height="24" viewBox="0 0 24 24"></svg>
+          <span>Explore</span>
+          <svg class="material-icons"  width="24" height="24" viewBox="0 0 24 24"></svg>    </a>
+    
+        <a class="card" target="_blank" rel="noopener" (click)="onListedNfts()">
+          <svg class="material-icons"  width="24" height="24" viewBox="0 0 24 24"></svg>
+          <span>Listed NFT's</span>
+          <svg class="material-icons"  width="24" height="24" viewBox="0 0 24 24"></svg>
+        </a>
+    
+        <a class="card" target="_blank" rel="noopener" (click)="onMyNfts()">
+          <svg  style="margin-right: 8px" width="21.813" height="23.453" viewBox="0 0 179.2 192.7"></svg>
+          <span>My NFT's</span>
+          <svg class="material-icons"  width="24" height="24" viewBox="0 0 24 24"></svg>
+        </a>
+    
+        <a class="card" target="_blank" rel="noopener" (click)="onConnect()" *ngIf="!condition">
+          <svg class="material-icons"  width="24" height="24" viewBox="0 0 24 24"></svg>
+          <span>Connect</span>
+          
+          <svg class="material-icons"  width="24" height="24" viewBox="0 0 24 24"></svg>
+        </a>
+        <a class="card" target="_blank" rel="noopener" (click)="onCreate()" *ngIf="condition">
+            <svg class="material-icons"  width="24" height="24" viewBox="0 0 24 24"></svg>
+            <span>Create</span>
+            
+            <svg class="material-icons"  width="24" height="24" viewBox="0 0 24 24"></svg>
+          </a>
+    
+      </div> 
+</div>
+
+

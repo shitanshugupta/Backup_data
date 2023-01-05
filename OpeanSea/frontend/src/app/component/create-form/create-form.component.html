@@ -1,0 +1,29 @@
+<div class="formNft">
+    <form action="" [formGroup]="loginForm" (ngSubmit)="onSubmit()" novalidate>
+        <div class="form-group">
+            <label for="name">Name:</label>
+            <input type="text" class="form-control" id="name"formControlName="name">
+        </div>
+        <div class="form-group">
+            <label for="des">Description:</label>
+            <input type="text" class="form-control" id="des" formControlName="des">
+        </div>
+        <div class="form-group">
+            <label for="price">Price(in ethers):</label>
+            <input type="number" class="form-control" id="price" formControlName="price">
+        </div>
+        <div class="input-group mb-3">
+            <div class="custom-file">
+                <label class="custom-file-label" for="inputGroupFile01">Choose Image</label>
+
+                <input type="file" class="custom-file-input" id="inputGroupFile01"
+                    aria-describedby="inputGroupFileAddon01" formControlName="image">
+            </div>
+        </div>
+        <br>
+
+        <button type="submit" class="btn btn-default">Submit</button>
+
+    </form>
+
+</div>

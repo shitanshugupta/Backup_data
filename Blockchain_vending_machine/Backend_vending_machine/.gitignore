@@ -1,0 +1,144 @@
+.env
+Public Keys
+==================
+
+(0) 0x701d38C8383Bf11C91dEeBFD630908510FD178b6 (100 ETH)
+(1) 0x6BBd6C85AD762D81b92B299C4ccEE9e55A1C94f5 (100 ETH)
+(2) 0x1bBA90FCD82Ecf1b4a606Fc2b2B7a9c6CED34581 (100 ETH)
+(3) 0xdc9b626B35Bc51DE528c16Fff4ec92ddf45e8cE5 (100 ETH)
+(4) 0x6D3662f511856d789F387122F4C33C1054E57392 (100 ETH)
+(5) 0x8D47025621770489e748E0365e2D5Cc90272a456 (100 ETH)
+(6) 0x8F324aB018A4c70Fb6d786F09B039545fb309074 (100 ETH)
+(7) 0xbFC1e9352Ff59D70783A513fccC3b2D2272B5d87 (100 ETH)
+(8) 0x41b60101AFE60067D4C37ceB138cd94a4Bac36b5 (100 ETH)
+(9) 0x8ff35b13d9316b8Bad3C3d07Bf57Fa2d7Fa9Bf9D (100 ETH)
+
+Private Keys
+==================
+(0) 0xd52c65e56d105c72e1ca1de1224bc91a58d579f32d76b389ac232ff40bf357dd
+(1) 0xb767593a95874f879914cae92f2606177a603b89c1d287607d5c3935aa9353dc
+(2) 0xed054f9cf76af490a2a28b0f1e217c1eab0a1ec3a1a8bfffca5af7cbe2fb5783
+(3) 0x494a17498d93d73614417135767ce3ef1710cc712c20a0c5dc0703bfa26ec99b
+(4) 0xac4b0db73c4eb8cac4c32abe4a0a6104a88e3376b07dc11f13db1f5c1c3ab432
+(5) 0x494b8e31adee61e81ebd89941d0522c023ae2efa0060212d9e55037a19c5a401
+(6) 0xb4833ca31ad23abd846f0fba517dba2aa29c2d42bdfde54869522136872245f0
+(7) 0x3bd5b1a22c38fa3139cdf76da7dedaa35008e3000d0a37b6e5f5b02d56d8c356
+(8) 0xf9961733cb4a91c9c77f7303bdfc5e97f617a561843fe30c799a2ad3ee60c7b8
+(9) 0xe042aed0cdc31d61e54470db9883d991161638455e2fe830a4d53e95a7389364
+
+HD Wallet
+==================
+Mnemonic:      dynamic town crash regret test pupil ostrich invest lizard destroy portion polar
+Base HD Path:  m/44'/60'/0'/0/{account_index}
+
+Gas Price
+==================
+20000000000
+
+Gas Limit
+==================
+6721975
+
+Call Gas Limit
+==================
+9007199254740991
+
+Listening on 127.0.0.1:8545
+
+
+steps to perform
+// create a contract vendingmachine.sol
+// create a migration file
+// install ganche-cli
+// using ganche-cli to run a ganache test net
+// then in another terminal run truffle migrate to deploy the contract to network local blockchain (ganache provides)
+Compiling your contracts...
+===========================
+> Everything is up to date, there is nothing to compile.
+
+
+Starting migrations...
+======================
+> Network name:    'development'
+> Network id:      1665125609294
+> Block gas limit: 6721975 (0x6691b7)
+
+
+1_deploy_contract.js
+====================
+
+   Deploying 'vendingMachine'
+   --------------------------
+   > transaction hash:    0xa3dfbd9223fbb2ec442f85eb2a3dd9350823d9b45e1faa9984d6b49ea83e7d7e
+   > Blocks: 0            Seconds: 0
+   > contract address:    0xfbb7C01c6b0Bf0D808F26Bb82F4bfa1F623b5fE8
+   > block number:        1
+   > block timestamp:     1665126588
+   > account:             0x701d38C8383Bf11C91dEeBFD630908510FD178b6
+   > balance:             99.98937048
+   > gas used:            531476 (0x81c14)
+   > gas price:           20 gwei
+   > value sent:          0 ETH
+   > total cost:          0.01062952 ETH
+
+   > Saving artifacts
+   -------------------------------------
+   > Total cost:          0.01062952 ETH
+
+Summary
+=======
+> Total deployments:   1
+> Final cost:          0.01062952 ETH
+
+// this will genrate at ganache-cli 
+
+Listening on 127.0.0.1:8545
+eth_blockNumber
+net_version
+eth_accounts
+eth_getBlockByNumber
+eth_accounts
+net_version
+eth_getBlockByNumber
+eth_getBlockByNumber
+net_version
+eth_getBlockByNumber
+eth_estimateGas
+net_version
+eth_blockNumber
+eth_getBlockByNumber
+eth_estimateGas
+eth_getBlockByNumber
+eth_gasPrice
+eth_sendTransaction
+
+  Transaction: 0xa3dfbd9223fbb2ec442f85eb2a3dd9350823d9b45e1faa9984d6b49ea83e7d7e
+  Contract created: 0xfbb7c01c6b0bf0d808f26bb82f4bfa1f623b5fe8
+  Gas usage: 531476
+  Block Number: 1
+  Block Time: Fri Oct 07 2022 12:39:48 GMT+0530 (India Standard Time)
+
+eth_getTransactionReceipt
+eth_getCode
+eth_getTransactionByHash
+eth_getBlockByNumber
+eth_getBalance
+
+// truffle is a environment
+// ganache is like a test net where contracts are deployed and tested
+
+// now we can directly interact with the smart contract on local blockchain using ganache-cli using the (truffle console) command
+
+//vendingMachine.deployed().then((x)=>{contract=x})
+undefined
+truffle(development)> contract.getVendingMachineBalacnce().then((b)=>{bal=b})
+undefined
+truffle(development)> bal
+BN {
+  negative: 0,
+  words: [ 100, <1 empty item> ],
+  length: 1,
+  red: null
+}
+truffle(development)> bal.toString()
+'100'

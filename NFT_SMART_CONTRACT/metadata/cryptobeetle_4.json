@@ -1,0 +1,27 @@
+{
+    "name": "Crypto Beetle 4",
+    "description": "Crypto Beetle",
+    "image": "https://ipfs.io/ipfs/QmP2TZTNAqNaxGq9gKxG5o3QiPpmtVWr4HDqafd71rChbC",
+    "attributes": [
+        {
+            "trait_type": "Generation",
+            "value": 10
+        },
+        {
+            "trait_type": "Dots",
+            "value": 40
+        },
+        {
+            "trait_type": "Antenna",
+            "value": "regular-style"
+        },
+        {
+            "trait_type": "Background",
+            "value": "clouds-vinatge"
+        },
+        {
+            "trait_type": "sunglasses",
+            "value": true
+        }
+    ]
+}
