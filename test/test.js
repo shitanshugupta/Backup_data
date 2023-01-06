@@ -11,7 +11,7 @@ Web3 = require("web3");
 web3 = new Web3(new Web3.providers.HttpProvider("http://127.0.0.1:8545"));
 
 // Reading the file
-file = fs.readFileSync("./contracts/cryptobeetle.sol").toString();
+file = fs.readFileSync("initial.sol").toString();
 
 // console.log(file);
 
@@ -19,7 +19,7 @@ file = fs.readFileSync("./contracts/cryptobeetle.sol").toString();
 var input = {
 	language: "Solidity",
 	sources: {
-		"cryptobeetle.sol": {
+		"initial.sol": {
 			content: file,
 		},
 	},
@@ -36,8 +36,8 @@ var input = {
 var output = JSON.parse(solc.compile(JSON.stringify(input)));
 // console.log("Result : ", output);
 
-ABI = output.contracts["cryptobeetle.sol"]["initial"].abi;
-bytecode = output.contracts["cryptobeetle.sol"]["initial"].evm.bytecode.object;
+ABI = output.contracts["initial.sol"]["initial"].abi;
+bytecode = output.contracts["initial.sol"]["initial"].evm.bytecode.object;
 // console.log("Bytecode: ", bytecode);
 // console.log("ABI: ", ABI);
 
